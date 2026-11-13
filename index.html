@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Le Fournil de Léa, boulangerie de quartier : pains au levain et viennoiseries maison.">
+    <title>Le Fournil de Léa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/le_fournil_favicon.svg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="home" href="#accueil">Le Fournil <img class="logo" src="images/le_fournil_favicon.svg" alt="Logo du Fournil de Léa"></a>
+        <nav class="navigation" aria-label="Navigation principale">
+            <a href="#accueil">Accueil</a>
+            <a href="#produits">Nos produits</a>
+            <a href="#horaires">Nos horaires</a>
+            <a href="#contact">Nous écrire</a>
+            <a href="#panier" class="panier" id="menu-panier">Panier : <span id="compteur">0</span></a>
+        </nav>
+    </header>
+        <div width="100" height="200" class="Panier" id="panier">
+            <form method="post">
+                <ul class="liste-panier">
+                    <li>
+                        <img src="" alt="" classe="imgProduit">
+                            "Pain au Levain"
+                        <span id="nbPainAuLevain">
+                            0
+                        </span>
+                        <button type="button">
+                            <img src="" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <img src="" alt="" classe="imgProduit">
+                            "Croissant"
+                        <span id="nbCroissants">
+                            0
+                        </span>
+                        <button type="button">
+                            <img src="" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <img src="" alt="" classe="imgProduit">
+                            "Pain au Chocolat"
+                        <span id="nbPainAuChocolat">
+                            0
+                        </span>
+                        <button type="button">
+                            <img src="" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <img src="" alt="" classe="imgProduit">
+                            "Tarte aux Pommes"
+                        <span id="nbTartesAuxPommes">
+                            0
+                        </span>
+                        <button type="button">
+                            <img src="" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <img src="" alt="" classe="imgProduit">
+                            "Tarte aux Fraises"
+                        <span id="nbTartesAuxFraise">
+                            0
+                        </span>
+                        <button type="button">
+                            <img src="" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <img src="" alt="" classe="imgProduit">
+                            "Cookie"
+                        <span id="nbCookies">
+                            0
+                        </span>
+                        <button type="button">
+                            <img src="" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <img src="" alt="" classe="imgProduit">
+                            "Baguette"
+                        <span id="nbBaguettes">
+                            0
+                        </span>
+                        <button type="button">
+                            <img src="" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <img src="" alt="" classe="imgProduit">
+                            "Eclair"
+                        <span id="nbEclairs">
+                            0
+                        </span>
+                        <button type="button">
+                            <img src="" alt="">
+                        </button>
+                    </li>
+                </ul>
+                <button type="submit">Valider le panier</button>
+            </form>
+        </div>
+    <main>
+        <section id="accueil" class="titre">
+            <H1>Le Fournil de Léa</H1>
+            <p>Boulangerie de quartier : pains au levain et viennoiseries maison.</p>
+        </section>
+
+        <section id="apropos" class="section apropos">
+            <H2>Qui sommes-nous ?</H2>
+            <p>
+                Léa a ouvert le Fournil en 2019, au coin de la rue des Lilas.
+                Chaque nuit, elle pétrit, façonne et cuit sur place.
+                Ici, pas de pâte surgelée : tout part de la farine.
+            </p>
+            <ul class="engagements">
+                <li>Des farines bio d'un moulin voisin</li>
+                <li>Un levain naturel, nourri chaque jour</li>
+                <li>Une cuisson sur place, tous les matins</li>
+            </ul>
+        </section>
+
+        <section id="produits" class="section products-section">
+            <H2>Nos produits</H2>
+            <ul class="products">
+                <li class="product-card">
+                    <img src="images/pain-au-levain.svg" alt="Illustration d'un pain au levain">
+                    <H3>Pain au levain</H3>
+                    <p>Une croûte épaisse, une mie souple. Il se garde quatre jours.</p>
+                    <p class="price">4,20 €</p>
+                    <button type="button" id="painAuLevain"  class="produit-bouton">Commander</button>
+                </li>
+                <li class="product-card">
+                    <img src="images/croissant.svg" alt="Illustration d'un croissant">
+                    <H3>Croissant</H3>
+                    <p>Pur beurre, feuilleté à la main.</p>
+                    <p class="price">1,30 €</p>
+                    <button type="button" id="croissant" class="produit-bouton">Commander</button>
+                </li>
+                <li class="product-card">
+                    <img src="images/tarte-aux-pommes.svg" alt="Illustration d'une tarte aux pommes">
+                    <H3>Tarte aux pommes</H3>
+                    <p>Pommes du verger voisin, pâte sablée maison. Pour 6 personnes.</p>
+                    <p class="price">18,00 €</p>
+                    <button type="button" id="tarteAuxPommes" class="produit-bouton">Commander</button>
+                </li>
+                <li class="product-card">
+                    <img src="images/cookie.svg" alt="Illustration d'un cookie aux pépites de chocolat">
+                    <H3>Cookie</H3>
+                    <p>Gros éclats de chocolat noir, cœur fondant.</p>
+                    <p class="price">2,10 €</p>
+                    <button type="button" id="cookie" class="produit-bouton">Commander</button>
+                </li>
+                <li class="product-card">
+                    <img src="images/baguette.png" alt="Illustration d'une baguette">
+                    <H3>Baguette</H3>
+                    <p>Une croûte croustillante, une mie moelleuse. Il se garde deux jours.</p>
+                    <p class="price">2,50 €</p>
+                    <button type="button" id="baguette" class="produit-bouton">Commander</button>
+                </li>
+                <li class="product-card">
+                    <img src="images/pain-au-chocolat.png" alt="Illustration d'un pain au chocolat">
+                    <H3>Pain au chocolat</H3>
+                    <p>Pâte feuilletée, chocolat noir.</p>
+                    <p class="price">1,50 €</p>
+                    <button type="button" id="painAuChocolat" class="produit-bouton">Commander</button>
+                </li>
+                <li class="product-card">
+                    <img src="images/tarte-aux-fraise.png" alt="Illustration d'une tarte aux fraises">
+                    <H3>Tarte aux fraises</H3>
+                    <p>Fraises de saison, pâte sablée maison. Pour 6 personnes.</p>
+                    <p class="price">18,00 €</p>
+                    <button type="button" id="tarteAuxFraise" class="produit-bouton">Commander</button>
+                </li>
+                <li class="product-card">
+                    <img src="images/eclaire.png" alt="Illustration d'un éclair">
+                    <H3>Éclair</H3>
+                    <p>Pâte à la pâte à choux, crème pâtissière, glaçage au chocolat, vanille ou café.</p>
+                    <p class="price">2,10 €</p>
+                    <button type="button" id="eclair" class="produit-bouton">Commander</button>
+                </li>
+            </ul>
+        </section>
+
+        <section id="horaires" class="section hours-section">
+            <H2>Nos horaires</H2>
+            <button type="button" id="bouton-horaires">Voir les horaires</button>
+            <table class="hours-table" id="table-horaires" class="cache">
+                <thead>
+                    <tr>
+                        <th scope="col">Jour</th>
+                        <th scope="col">Horaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Du mardi au vendredi</td>
+                        <td>7 h - 19 h</td>
+                    </tr>
+                    <tr>
+                        <td>Samedi</td>
+                        <td>7 h - 13 h</td>
+                    </tr>
+                    <tr>
+                        <td>Dimanche</td>
+                        <td>7 h - 12 h 30</td>
+                    </tr>
+                    <tr>
+                        <td>Lundi</td>
+                        <td>Fermé</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <H2>Nous écrire</H2>
+            <form action="#" method="post">
+                <p>Une commande spéciale ? Un gâteau d'anniversaire ? Écrivez-nous.</p>
+
+                <div class="form-field">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom" autocomplete="name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Votre e-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="msg">Votre message</label>
+                    <textarea id="msg" name="message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>Le Fournil de Léa, 12 rue des Lilas</span>
+        <a href="mentions-legales.html">Mentions légales</a>
+    </footer>
+</body>
+
+</html>
